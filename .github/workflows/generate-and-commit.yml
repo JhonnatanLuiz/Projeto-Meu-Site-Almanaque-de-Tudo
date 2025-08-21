@@ -1,0 +1,38 @@
+name: Generate RSS & Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate feed and sitemap
+        run: npm run generate
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml sitemap.xml || true
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: regenerate feed.xml and sitemap.xml [skip ci]" || true
+            git push origin HEAD:main
+          else
+            echo "No changes to commit"
+          fi
