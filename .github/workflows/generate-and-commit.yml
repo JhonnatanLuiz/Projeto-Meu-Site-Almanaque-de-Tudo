@@ -2,7 +2,7 @@ name: Generate RSS & Sitemap
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master, main ]
   workflow_dispatch: {}
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Generate feed and sitemap
         run: npm run generate
