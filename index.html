@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Um almanaque digital com curiosidades e fatos interessantes.">
-    <title>Almanaque Digital</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Almanaque de Tudo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="main-container">
+        <main class="content">
+            <header class="main-header">
+                <img src="https://picsum.photos/seed/almanac/1200/400" alt="Imagem conceitual de tecnologia e conhecimento" class="hero-image">
+            </header>
+            <article class="post">
+                <h2>O que é a Inteligência Artificial (IA)?</h2>
+                <p>Desde os primórdios, há especulações de se construir máquinas inteligentes...</p>
+                <!-- O restante do conteúdo do artigo irá aqui -->
+            </article>
+            <article class="post">
+                <h2>O que é a Marvel?</h2>
+                <p>A Marvel Comics é uma editora norte-americana de mídias relacionadas...</p>
+                <!-- O restante do conteúdo do artigo irá aqui -->
+            </article>
+             <article class="post">
+                <h2>O que é a Ciência de Dados (Data Science)?</h2>
+                <p>A Ciência de Dados é um campo conceitual de função científica...</p>
+                <!-- O restante do conteúdo do artigo irá aqui -->
     <div class="container">
         <main id="main-content" class="content">
             <figure class="reveal">
@@ -108,10 +127,38 @@
                 </div>
             </article>
         </main>
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>Sobre o Autor</h3>
+                <p>Bem-vindos ao meu blog, um espaço dedicado a compartilhar insights sobre os mais variados temas.</p>
+            </div>
+            <div class="sidebar-widget">
+                <h3>Categorias</h3>
+                <ul>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Cultura Pop</a></li>
+                    <li><a href="#">Ciência</a></li>
+                </ul>
+            </div>
+        </aside>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="js/database.js"></script>
-    <script src="js/app.js"></script>
+    <footer>
+        <div class="footer-content">
+            <h2>Almanaque de Tudo</h2>
+            <div class="footer-nav">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+                <button>Buscar</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 Almanaque de Tudo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
