@@ -4,7 +4,8 @@
   "description": "Este é um protótipo de um almanaque digital interativo, construído com HTML, CSS e JavaScript puros. O projeto foi projetado para ser um repositório de conhecimento fácil de navegar, com foco em uma experiência de usuário limpa e moderna.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node generate.js"
   },
   "repository": {
     "type": "git",
