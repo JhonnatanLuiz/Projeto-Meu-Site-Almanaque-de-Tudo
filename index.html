@@ -3,35 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almanaque de Tudo</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Almanaque de Tudo - Conhecimento para Todos | Ciência, História, Tecnologia</title>
+    <meta name="description" content="Descubra artigos fascinantes sobre ciência, história, tecnologia, natureza e curiosidades. Seu portal de conhecimento completo e acessível.">
+    <meta name="keywords" content="almanaque, ciência, história, tecnologia, curiosidades, educação, conhecimento">
+    <meta name="author" content="Almanaque de Tudo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://seudominio.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:title" content="Almanaque de Tudo - Conhecimento para Todos">
+    <meta property="og:description" content="Descubra artigos fascinantes sobre ciência, história, tecnologia e muito mais.">
+    <meta property="og:image" content="https://seudominio.com/imagens/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://seudominio.com">
+    <meta property="twitter:title" content="Almanaque de Tudo - Conhecimento para Todos">
+    <meta property="twitter:description" content="Descubra artigos fascinantes sobre ciência, história, tecnologia e muito mais.">
+    <meta property="twitter:image" content="https://seudominio.com/imagens/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="main-container">
-        <main class="content">
-            <header class="main-header">
-                <img src="https://picsum.photos/seed/almanac/1200/400" alt="Imagem conceitual de tecnologia e conhecimento" class="hero-image">
-            </header>
-            <article class="post">
-                <h2>O que é a Inteligência Artificial (IA)?</h2>
-                <p>Desde os primórdios, há especulações de se construir máquinas inteligentes...</p>
-                <!-- O restante do conteúdo do artigo irá aqui -->
-            </article>
-            <article class="post">
-                <h2>O que é a Marvel?</h2>
-                <p>A Marvel Comics é uma editora norte-americana de mídias relacionadas...</p>
-                <!-- O restante do conteúdo do artigo irá aqui -->
-            </article>
-             <article class="post">
-                <h2>O que é a Ciência de Dados (Data Science)?</h2>
-                <p>A Ciência de Dados é um campo conceitual de função científica...</p>
-                <!-- O restante do conteúdo do artigo irá aqui -->
+<body class="dark-mode">
+    <!-- Skip to main content (acessibilidade) -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header com navegação -->
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Almanaque de Tudo</h1>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link active" data-page="home">Início</a>
+                <a href="sobre.html" class="nav-link" data-page="about">Sobre</a>
+                <a href="curiosidades.html" class="nav-link" data-page="curiosities">Curiosidades</a>
+                <a href="contato.html" class="nav-link" data-page="contact">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <!-- Busca interna avançada -->
+                <div class="search-container">
+                    <button id="search-toggle" class="search-toggle" aria-label="Abrir busca" title="Buscar artigos (Ctrl+K)">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- Busca Wikipedia -->
+                <div class="search-wikipedia">
+                    <input type="text" id="wiki-search" placeholder="Wikipedia..." aria-label="Pesquisar na Wikipedia">
+                    <button id="wiki-search-btn" aria-label="Buscar na Wikipedia"><i class="fas fa-wikipedia-w"></i></button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de Busca Avançada -->
+    <div id="search-modal" class="search-modal" role="dialog" aria-labelledby="search-title" aria-hidden="true">
+        <div class="search-modal-content">
+            <div class="search-header">
+                <h2 id="search-title">Buscar Artigos</h2>
+                <button id="search-close" class="search-close" aria-label="Fechar busca">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-input-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" 
+                       id="search-input" 
+                       class="search-input" 
+                       placeholder="Digite para buscar..." 
+                       aria-label="Campo de busca"
+                       autocomplete="off">
+                <div class="search-filters">
+                    <select id="filter-category" aria-label="Filtrar por categoria">
+                        <option value="">Todas as categorias</option>
+                    </select>
+                    <select id="filter-sort" aria-label="Ordenar por">
+                        <option value="relevance">Relevância</option>
+                        <option value="date-desc">Mais recentes</option>
+                        <option value="date-asc">Mais antigos</option>
+                        <option value="title">Título A-Z</option>
+                    </select>
+                </div>
+            </div>
+            <div id="search-results" class="search-results">
+                <div class="search-suggestions">
+                    <h3>Buscas populares:</h3>
+                    <div id="popular-searches" class="tag-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Início</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+                <span itemprop="name">Todos os Artigos</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </nav>
+    
+    <!-- Menu Lateral (Sidebar à esquerda) -->
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Alternar menu lateral" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <aside id="sidebar-menu" class="sidebar-menu" role="complementary" aria-label="Menu de navegação">
+        <div class="sidebar-menu-header">
+            <h2>Menu</h2>
+            <button id="sidebar-close" class="sidebar-close" aria-label="Fechar menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <h3>Categorias</h3>
+            <ul id="category-nav" class="category-nav"></ul>
+            
+            <h3>Filtros Rápidos</h3>
+            <ul class="quick-filters">
+                <li><a href="#" data-filter="featured"><i class="fas fa-star"></i> Em Destaque</a></li>
+                <li><a href="#" data-filter="recent"><i class="fas fa-clock"></i> Recentes</a></li>
+                <li><a href="#" data-filter="trending"><i class="fas fa-fire"></i> Populares</a></li>
+                <li><a href="#" data-filter="all"><i class="fas fa-list"></i> Todos</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- Container principal -->
     <div class="container">
+        <!-- Conteúdo principal -->
         <main id="main-content" class="content">
-            <figure class="reveal">
+            <!-- Hero image -->
+            <figure class="hero-section reveal">
                 <picture>
-                    <img src="imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg" alt="Colagem ilustrativa de temas do Almanaque de Tudo" width="1200" height="600" data-hero loading="eager" decoding="async">
+                    <img src="imagens/earth-space.svg" 
+                         alt="Visão noturna da Terra vista do espaço" 
+                         class="hero-image"
+                         loading="eager">
                 </picture>
                 <figcaption>Conhecimento para todos: ciência, história, tecnologia, natureza e muito mais.</figcaption>
             </figure>
@@ -127,38 +253,89 @@
                 </div>
             </article>
         </main>
-        <aside class="sidebar">
-            <div class="sidebar-widget">
-                <h3>Sobre o Autor</h3>
-                <p>Bem-vindos ao meu blog, um espaço dedicado a compartilhar insights sobre os mais variados temas.</p>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" role="complementary">
+            <!-- Widget: Índice do Artigo (Table of Contents) -->
+            <div id="toc-widget" class="sidebar-widget toc-widget reveal hidden">
+                <h3>Índice</h3>
+                <nav id="table-of-contents" class="table-of-contents" aria-label="Índice do artigo"></nav>
             </div>
-            <div class="sidebar-widget">
+            
+            <!-- Widget: Sobre o Autor -->
+            <div class="sidebar-widget reveal">
+                <h3>Sobre o Autor</h3>
+                <p>Um entusiasta curioso, dedicado a desbravar e compartilhar insights sobre ciência, tecnologia e descobertas fascinantes.</p>
+            </div>
+            
+            <!-- Widget: Curiosidade do Dia -->
+            <div id="daily-fact" class="sidebar-widget reveal">
+                <!-- Carregado dinamicamente -->
+            </div>
+
+            <!-- Widget: Categorias -->
+            <div class="sidebar-widget reveal">
                 <h3>Categorias</h3>
-                <ul>
-                    <li><a href="#">Tecnologia</a></li>
-                    <li><a href="#">Cultura Pop</a></li>
-                    <li><a href="#">Ciência</a></li>
+                <ul id="category-list-sidebar" class="category-list">
+                    <!-- Links serão carregados dinamicamente via JavaScript -->
                 </ul>
+            </div>
+            
+            <!-- Widget: Tags Populares -->
+            <div class="sidebar-widget reveal">
+                <h3>Tags Populares</h3>
+                <div id="popular-tags" class="tag-cloud"></div>
+            </div>
+            
+            <!-- Widget: Artigos Relacionados -->
+            <div id="related-widget" class="sidebar-widget reveal hidden">
+                <h3>Artigos Relacionados</h3>
+                <ul id="related-articles" class="related-articles-list"></ul>
             </div>
         </aside>
     </div>
-    <footer>
-        <div class="footer-content">
-            <h2>Almanaque de Tudo</h2>
-            <div class="footer-nav">
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar...">
-                <button>Buscar</button>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Almanaque de Tudo</h2>
+                <nav class="footer-nav">
+                    <a href="#">Início</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Curiosidades</a>
+                    <a href="#">Contato</a>
+                </nav>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2023 Almanaque de Tudo. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Almanaque de Tudo. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Fuse.js para busca fuzzy -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    
+    <!-- Scripts principais -->
+    <script src="script.js" defer></script>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Almanaque de Tudo",
+      "url": "https://seudominio.com",
+      "description": "Portal de conhecimento com artigos sobre ciência, história, tecnologia e curiosidades",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://seudominio.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </body>
 </html>

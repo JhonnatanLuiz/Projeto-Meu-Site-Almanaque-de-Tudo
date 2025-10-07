@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Curiosidades Fascinantes - Almanaque de Tudo</title>
+    <meta name="description" content="Descubra fatos surpreendentes e curiosidades fascinantes sobre ciência, história e o mundo ao nosso redor.">
+    <meta name="keywords" content="curiosidades, fatos interessantes, ciência, história, conhecimento">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html">📚 Almanaque de Tudo</a></h1>
+            </div>
+            <nav class="main-nav" role="navigation">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="curiosidades.html" class="nav-link active">Curiosidades</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <button id="random-article-btn" class="random-btn" aria-label="Artigo aleatório" title="Ir para artigo aleatório">
+                    <i class="fas fa-random"></i>
+                </button>
+                <div class="search-wikipedia">
+                    <input type="text" id="wiki-search" placeholder="Wikipedia..." aria-label="Buscar na Wikipedia">
+                    <button id="wiki-search-btn" aria-label="Buscar na Wikipedia"><i class="fas fa-wikipedia-w"></i></button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="breadcrumbs">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="index.html">
+                    <span itemprop="name">Início</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+                <span itemprop="name">Curiosidades</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </nav>
+    
+    <div class="container" id="main-content">
+        <main class="main-content">
+            <h1>🌟 Curiosidades Fascinantes</h1>
+            
+            <article class="post reveal active">
+                <h2><i class="fas fa-atom"></i> Ciência Surpreendente</h2>
+                <ul class="curiosity-list">
+                    <li>
+                        <strong>Átomos vazios:</strong> Se você pudesse remover todo o espaço vazio dos átomos que compõem todos os seres humanos, toda a humanidade caberia em um cubo de açúcar!
+                        <a href="https://pt.wikipedia.org/wiki/%C3%81tomo" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Velocidade da luz:</strong> A luz viaja tão rápido que pode dar 7,5 voltas ao redor da Terra em apenas 1 segundo.
+                        <a href="https://pt.wikipedia.org/wiki/Velocidade_da_luz" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>DNA compartilhado:</strong> Compartilhamos cerca de 60% do nosso DNA com... bananas! E 98,8% com chimpanzés.
+                        <a href="https://pt.wikipedia.org/wiki/DNA" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="post reveal">
+                <h2><i class="fas fa-globe"></i> Natureza Incrível</h2>
+                <ul class="curiosity-list">
+                    <li>
+                        <strong>Coração da baleia azul:</strong> O coração de uma baleia azul é tão grande que um ser humano poderia nadar através de suas artérias!
+                        <a href="https://pt.wikipedia.org/wiki/Baleia-azul" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Árvores anciãs:</strong> A árvore mais antiga do mundo tem mais de 5.000 anos e ainda está viva na Califórnia.
+                        <a href="https://pt.wikipedia.org/wiki/Pinus_longaeva" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Formigueiros gigantes:</strong> A maior colônia de formigas do mundo se estende por 6.000 km ao longo da costa do Mediterrâneo!
+                        <a href="https://pt.wikipedia.org/wiki/Formiga" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="post reveal">
+                <h2><i class="fas fa-rocket"></i> Espaço Sideral</h2>
+                <ul class="curiosity-list">
+                    <li>
+                        <strong>Pôr do sol marciano:</strong> Em Marte, o pôr do sol é azul, ao contrário da Terra onde é vermelho/laranja.
+                        <a href="https://pt.wikipedia.org/wiki/Marte_(planeta)" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Diamantes em Júpiter:</strong> Cientistas acreditam que chova diamantes em Júpiter e Saturno!
+                        <a href="https://pt.wikipedia.org/wiki/J%C3%BApiter_(planeta)" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Pegadas lunares:</strong> As pegadas dos astronautas na Lua vão durar milhões de anos, pois não há vento para apagá-las.
+                        <a href="https://pt.wikipedia.org/wiki/Lua" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="post reveal">
+                <h2><i class="fas fa-brain"></i> Corpo Humano</h2>
+                <ul class="curiosity-list">
+                    <li>
+                        <strong>Neurônios incríveis:</strong> Seu cérebro contém aproximadamente 86 bilhões de neurônios, cada um conectado a milhares de outros!
+                        <a href="https://pt.wikipedia.org/wiki/Neur%C3%B4nio" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Esqueleto renovável:</strong> Seu esqueleto se renova completamente a cada 10 anos.
+                        <a href="https://pt.wikipedia.org/wiki/Esqueleto_humano" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Vasos sanguíneos:</strong> Se você alinhasse todos os seus vasos sanguíneos, eles dariam duas voltas ao redor da Terra!
+                        <a href="https://pt.wikipedia.org/wiki/Sistema_circulat%C3%B3rio" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="post reveal">
+                <h2><i class="fas fa-landmark"></i> História Curiosa</h2>
+                <ul class="curiosity-list">
+                    <li>
+                        <strong>Cleópatra e as pirâmides:</strong> Cleópatra viveu mais próxima temporalmente da chegada do homem à Lua do que da construção das Grandes Pirâmides!
+                        <a href="https://pt.wikipedia.org/wiki/Cle%C3%B3patra" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Universidade de Oxford:</strong> A Universidade de Oxford é mais antiga que o Império Asteca.
+                        <a href="https://pt.wikipedia.org/wiki/Universidade_de_Oxford" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li>
+                        <strong>Torre Eiffel crescente:</strong> A Torre Eiffel pode crescer até 15 cm no verão devido à expansão térmica do metal.
+                        <a href="https://pt.wikipedia.org/wiki/Torre_Eiffel" target="_blank" rel="noopener noreferrer">Saiba mais <i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                </ul>
+            </article>
+            
+            <div class="actions">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i> Voltar para Início
+                </a>
+                <a href="sobre.html" class="btn-secondary">
+                    <i class="fas fa-info-circle"></i> Sobre o Almanaque
+                </a>
+            </div>
+        </main>
+        
+        <aside class="sidebar" role="complementary">
+            <div class="sidebar-widget reveal">
+                <h3><i class="fas fa-list"></i> Categorias</h3>
+                <ul class="category-list" id="category-list-sidebar">
+                    <!-- Carregado dinamicamente via JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget reveal">
+                <h3>Explore Mais</h3>
+                <ul class="category-list">
+                    <li><a href="ciencia.html"><i class="fas fa-flask"></i> Ciência</a></li>
+                    <li><a href="historia.html"><i class="fas fa-landmark"></i> História</a></li>
+                    <li><a href="tecnologia.html"><i class="fas fa-microchip"></i> Tecnologia</a></li>
+                    <li><a href="natureza.html"><i class="fas fa-leaf"></i> Natureza</a></li>
+                    <li><a href="cultura.html"><i class="fas fa-film"></i> Cultura</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget reveal">
+                <h3>Tags Populares</h3>
+                <div class="tag-cloud">
+                    <a href="https://pt.wikipedia.org/wiki/F%C3%ADsica" target="_blank" rel="noopener noreferrer" class="tag">Física</a>
+                    <a href="https://pt.wikipedia.org/wiki/Astronomia" target="_blank" rel="noopener noreferrer" class="tag">Astronomia</a>
+                    <a href="https://pt.wikipedia.org/wiki/Biologia" target="_blank" rel="noopener noreferrer" class="tag">Biologia</a>
+                    <a href="https://pt.wikipedia.org/wiki/Qu%C3%ADmica" target="_blank" rel="noopener noreferrer" class="tag">Química</a>
+                    <a href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_humanidade" target="_blank" rel="noopener noreferrer" class="tag">História</a>
+                    <a href="https://pt.wikipedia.org/wiki/Natureza" target="_blank" rel="noopener noreferrer" class="tag">Natureza</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <footer class="site-footer">
+        <p>&copy; 2024 Almanaque de Tudo. Compartilhando conhecimento, expandindo horizontes.</p>
+        <p>
+            <a href="sobre.html">Sobre</a> | 
+            <a href="contato.html">Contato</a> | 
+            <a href="https://pt.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+        </p>
+    </footer>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

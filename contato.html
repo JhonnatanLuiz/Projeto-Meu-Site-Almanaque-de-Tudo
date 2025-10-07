@@ -3,58 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contato — fale com o Almanaque de Tudo para dúvidas, sugestões e parcerias.">
+    
     <title>Contato - Almanaque de Tudo</title>
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="Contato - Almanaque de Tudo">
-    <meta property="og:description" content="Contato — fale com o Almanaque de Tudo para dúvidas, sugestões e parcerias.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/contato.html">
-    <meta property="og:image" content="imagens/_be4f2914-3286-481a-befd-c6db9f3de5d8.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contato - Almanaque de Tudo">
-    <meta name="twitter:description" content="Contato — fale com o Almanaque de Tudo para dúvidas, sugestões e parcerias.">
-    <link rel="alternate" type="application/rss+xml" title="Almanaque de Tudo - RSS" href="/feed.xml">
+    <meta name="description" content="Entre em contato conosco. Envie sugestões, dúvidas ou contribua com o Almanaque de Tudo.">
+    <meta name="keywords" content="contato, almanaque, sugestões, dúvidas">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div id="progressBar" aria-hidden="true"></div>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header>
-        <div class="header-top">
-            <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Alternar tema">Tema</button>
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu de navegação">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <h1>Almanaque de Tudo</h1>
+<body class="dark-mode">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">📚 Almanaque de Tudo</a></h1>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="curiosidades.html" class="nav-link">Curiosidades</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <button id="random-article-btn" class="random-btn" aria-label="Artigo aleatório" title="Ir para artigo aleatório">
+                    <i class="fas fa-random"></i>
+                </button>
+                <div class="search-wikipedia">
+                    <input type="text" id="wiki-search" placeholder="Wikipedia..." aria-label="Buscar na Wikipedia">
+                    <button id="wiki-search-btn" aria-label="Buscar na Wikipedia"><i class="fas fa-wikipedia-w"></i></button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-        <nav id="main-navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="curiosidades.html">Curiosidades</a></li>
-                <li><a href="contato.html" aria-current="page">Contato</a></li>
-            </ul>
-        </nav>
-        <form id="wiki-search" class="search" role="search" aria-label="Pesquisar na Wikipedia">
-            <label class="sr-only" for="wiki-q">Pesquisar</label>
-            <input type="search" id="wiki-q" name="q" placeholder="Pesquisar na Wikipedia" required>
-            <button type="submit">Buscar</button>
-            <ul id="search-suggestions" role="listbox" hidden></ul>
-        </form>
     </header>
 
-    <div class="container">
-        <main id="main-content" class="content">
-            <article class="post reveal">
-                <h2>Entre em Contato</h2>
-                <p>Adoramos ouvir nossos leitores! Se você tem alguma dúvida, sugestão, ou apenas quer dizer um "olá", por favor, use o formulário abaixo. Responderemos o mais breve possível.</p>
+    <main class="main-container" id="main-content">
+        <div class="content-wrapper">
+            <article class="contact-page">
+                <header class="page-header">
+                    <h1>Entre em Contato</h1>
+                    <p class="subtitle">Adoramos ouvir nossos leitores! Se você tem alguma dúvida, sugestão, ou apenas quer dizer um "olá", por favor, use o formulário abaixo. Responderemos o mais breve possível.</p>
+                </header>
                 
                 <form action="#" method="POST" class="contact-form" novalidate>
                     <div class="form-group">
@@ -72,31 +64,40 @@
                     <button type="submit" class="submit-button">Enviar Mensagem</button>
                     <p class="form-feedback" aria-live="polite" role="status"></p>
                 </form>
-                <div class="actions" aria-label="Ações do post">
-                    <button type="button" class="share-btn" aria-label="Compartilhar esta página">Compartilhar</button>
-                    <button type="button" class="copy-link-btn" aria-label="Copiar link da página">Copiar link</button>
-                </div>
             </article>
-        </main>
 
-    <aside class="sidebar reveal">
-             <section class="widget">
-                <h3>Redes Sociais</h3>
-                <p>Siga-nos para não perder nenhuma novidade!</p>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter / X</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </section>
-        </aside>
-    </div>
+            <aside class="sidebar">
+                <section class="widget">
+                    <h3><i class="fas fa-share-nodes"></i> Redes Sociais</h3>
+                    <p>Siga-nos para não perder nenhuma novidade!</p>
+                    <ul class="social-links">
+                        <li><a href="https://pt.wikipedia.org/wiki/Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://pt.wikipedia.org/wiki/Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i> Twitter / X</a></li>
+                        <li><a href="https://pt.wikipedia.org/wiki/Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </section>
 
-    <footer>
-        <p>&copy; 2024 Almanaque de Tudo. Todos os direitos reservados.</p>
+                <section class="widget contact-info">
+                    <h3><i class="fas fa-info-circle"></i> Informações</h3>
+                    <p>Explore nosso almanaque digital e descubra conteúdo fascinante sobre diversos temas!</p>
+                    <ul>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                        <li><a href="index.html">Explorar categorias</a></li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2024 Almanaque de Tudo. Todos os direitos reservados.</p>
+            <p>Explore, aprenda e compartilhe conhecimento!</p>
+        </div>
     </footer>
-    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
+    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
     <script src="script.js"></script>
 </body>
 </html>

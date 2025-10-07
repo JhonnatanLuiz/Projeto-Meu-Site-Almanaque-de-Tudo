@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "id": "ciencia",
+      "name": "Ciência",
+      "icon": "fa-flask",
+      "description": "Descobertas científicas, física, química, biologia e muito mais",
+      "color": "#10b981",
+      "subcategories": ["Física", "Química", "Biologia", "Astronomia", "Medicina"]
+    },
+    {
+      "id": "historia",
+      "name": "História",
+      "icon": "fa-landmark",
+      "description": "Eventos históricos, civilizações antigas e marcos da humanidade",
+      "color": "#f59e0b",
+      "subcategories": ["Antiga", "Medieval", "Moderna", "Contemporânea", "Brasil"]
+    },
+    {
+      "id": "tecnologia",
+      "name": "Tecnologia",
+      "icon": "fa-microchip",
+      "description": "Inovações tecnológicas, IA, computação e futuro digital",
+      "color": "#3b82f6",
+      "subcategories": ["IA", "Computação", "Internet", "Gadgets", "Programação"]
+    },
+    {
+      "id": "natureza",
+      "name": "Natureza",
+      "icon": "fa-leaf",
+      "description": "Fauna, flora, ecossistemas e maravilhas naturais",
+      "color": "#22c55e",
+      "subcategories": ["Fauna", "Flora", "Ecossistemas", "Clima", "Oceanos"]
+    },
+    {
+      "id": "cultura",
+      "name": "Cultura Pop",
+      "icon": "fa-film",
+      "description": "Cinema, música, séries, quadrinhos e entretenimento",
+      "color": "#ec4899",
+      "subcategories": ["Cinema", "Música", "Séries", "Quadrinhos", "Games"]
+    },
+    {
+      "id": "curiosidades",
+      "name": "Curiosidades",
+      "icon": "fa-lightbulb",
+      "description": "Fatos interessantes, recordes e descobertas surpreendentes",
+      "color": "#eab308",
+      "subcategories": ["Recordes", "Fatos", "Mistérios", "Invenções", "Línguas"]
+    }
+  ],
+  "articles": [
+    {
+      "id": "telescopio-historia",
+      "title": "A História do Telescópio: Uma Janela para o Universo",
+      "category": "ciencia",
+      "subcategory": "Astronomia",
+      "author": "Almanaque de Tudo",
+      "date": "2025-10-01",
+      "readTime": "8 min",
+      "tags": ["astronomia", "telescópio", "galileu", "james webb", "história"],
+      "featured": true,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "Desde Galileu até o James Webb, descubra como os telescópios revolucionaram nossa compreensão do universo.",
+      "content": "Desde as primeiras lentes rudimentares de Galileu Galilei..."
+    },
+    {
+      "id": "plantas-carnivoras",
+      "title": "O Misterioso Mundo das Plantas Carnívoras",
+      "category": "natureza",
+      "subcategory": "Flora",
+      "author": "Almanaque de Tudo",
+      "date": "2025-09-28",
+      "readTime": "6 min",
+      "tags": ["plantas", "carnívoras", "natureza", "botânica", "evolução"],
+      "featured": true,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "Descubra os incríveis mecanismos e adaptações das plantas carnívoras.",
+      "content": "No vasto e diversificado reino vegetal..."
+    },
+    {
+      "id": "inteligencia-artificial",
+      "title": "Como a Inteligência Artificial está Moldando o Futuro",
+      "category": "tecnologia",
+      "subcategory": "IA",
+      "author": "Almanaque de Tudo",
+      "date": "2025-10-05",
+      "readTime": "10 min",
+      "tags": ["ia", "tecnologia", "futuro", "machine learning", "automação"],
+      "featured": true,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "Entenda como a IA está transformando nossa sociedade e o que esperar do futuro.",
+      "content": "A Inteligência Artificial já não é mais um conceito de ficção científica..."
+    },
+    {
+      "id": "piramides-egito",
+      "title": "As Pirâmides do Egito: Mistérios da Antiguidade",
+      "category": "historia",
+      "subcategory": "Antiga",
+      "author": "Almanaque de Tudo",
+      "date": "2025-09-20",
+      "readTime": "12 min",
+      "tags": ["egito", "pirâmides", "história", "arqueologia", "faraós"],
+      "featured": false,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "Como foram construídas as pirâmides e quais segredos elas ainda guardam?",
+      "content": "As Pirâmides do Egito são uma das Sete Maravilhas do Mundo Antigo..."
+    },
+    {
+      "id": "buraco-negro",
+      "title": "Buracos Negros: Os Enigmas Mais Densos do Universo",
+      "category": "ciencia",
+      "subcategory": "Astronomia",
+      "author": "Almanaque de Tudo",
+      "date": "2025-09-15",
+      "readTime": "9 min",
+      "tags": ["buracos negros", "física", "espaço", "einstein", "relatividade"],
+      "featured": false,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "Entenda o que são buracos negros, como se formam e por que são tão fascinantes.",
+      "content": "Buracos negros são regiões do espaço onde a gravidade é tão forte..."
+    },
+    {
+      "id": "internet-historia",
+      "title": "A História da Internet: De ARPANET à Web 3.0",
+      "category": "tecnologia",
+      "subcategory": "Internet",
+      "author": "Almanaque de Tudo",
+      "date": "2025-09-10",
+      "readTime": "11 min",
+      "tags": ["internet", "história", "tecnologia", "web", "comunicação"],
+      "featured": false,
+      "image": "imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg",
+      "summary": "A evolução da rede que conectou o mundo inteiro.",
+      "content": "A internet começou como um projeto militar nos anos 1960..."
+    }
+  ],
+  "popularSearches": [
+    "telescópio james webb",
+    "inteligência artificial",
+    "plantas carnívoras",
+    "pirâmides do egito",
+    "buracos negros",
+    "história da internet",
+    "fotossíntese",
+    "big bang"
+  ],
+  "recentlyAdded": [
+    "inteligencia-artificial",
+    "telescopio-historia",
+    "plantas-carnivoras"
+  ],
+  "trending": [
+    "inteligencia-artificial",
+    "buraco-negro",
+    "telescopio-historia"
+  ]
+}

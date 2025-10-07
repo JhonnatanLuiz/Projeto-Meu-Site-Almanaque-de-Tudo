@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sobre - Almanaque de Tudo</title>
+    <meta name="description" content="Conheça o Almanaque de Tudo, seu portal de conhecimento sobre ciência, história, tecnologia e muito mais.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">📚 Almanaque de Tudo</a></h1>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link active">Sobre</a>
+                <a href="curiosidades.html" class="nav-link">Curiosidades</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <button id="random-article-btn" class="random-btn" aria-label="Artigo aleatório" title="Ir para artigo aleatório">
+                    <i class="fas fa-random"></i>
+                </button>
+                <div class="search-wikipedia">
+                    <input type="text" id="wiki-search" placeholder="Wikipedia..." aria-label="Buscar na Wikipedia">
+                    <button id="wiki-search-btn" aria-label="Buscar na Wikipedia"><i class="fas fa-wikipedia-w"></i></button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-container" id="main-content">
+        <div class="content-wrapper">
+            <article class="post">
+                <h1>Sobre o Almanaque de Tudo</h1>
+                
+                <div class="hero-section">
+                    <img src="imagens/earth-space.svg" alt="Visão noturna da Terra vista do espaço" class="hero-image" loading="eager">
+                </div>
+                
+                <h2>Nossa Missão</h2>
+                <p>O <strong>Almanaque de Tudo</strong> nasceu da paixão por compartilhar conhecimento de forma acessível, interessante e envolvente.</p>
+                
+                <h2>O Que Oferecemos</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <i class="fas fa-flask cat-icon-ciencia"></i>
+                        <h3>Ciência</h3>
+                        <p>Desvendando os mistérios do universo.</p>
+                        <a href="ciencia.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-landmark cat-icon-historia"></i>
+                        <h3>História</h3>
+                        <p>Viajando pelo tempo.</p>
+                        <a href="historia.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-microchip cat-icon-tecnologia"></i>
+                        <h3>Tecnologia</h3>
+                        <p>Explorando inovações.</p>
+                        <a href="tecnologia.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-leaf cat-icon-natureza"></i>
+                        <h3>Natureza</h3>
+                        <p>Descobrindo maravilhas naturais.</p>
+                        <a href="natureza.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-film cat-icon-cultura"></i>
+                        <h3>Cultura</h3>
+                        <p>Celebrando a diversidade cultural.</p>
+                        <a href="cultura.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="category-card">
+                        <i class="fas fa-lightbulb cat-icon-curiosidades"></i>
+                        <h3>Curiosidades</h3>
+                        <p>Fatos fascinantes.</p>
+                        <a href="curiosidades.html" class="btn-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="index.html" class="btn-primary">
+                        <i class="fas fa-home"></i> Voltar
+                    </a>
+                    <a href="contato.html" class="btn-secondary">
+                        <i class="fas fa-envelope"></i> Contato
+                    </a>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <section class="widget">
+                    <h3><i class="fas fa-list"></i> Categorias</h3>
+                    <ul class="category-list" id="category-list-sidebar">
+                        <!-- Carregado dinamicamente -->
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2024 Almanaque de Tudo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

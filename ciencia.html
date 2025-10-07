@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ciência - Almanaque de Tudo</title>
+    <meta name="description" content="Descubra artigos fascinantes sobre ciência: física, química, biologia, astronomia e medicina.">
+    <meta name="keywords" content="ciência, física, química, biologia, astronomia, medicina">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html" class="logo-link">📚 Almanaque de Tudo</a></h1>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <a href="curiosidades.html" class="nav-link">Curiosidades</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <div class="search-wikipedia">
+                    <input type="text" id="wiki-search" placeholder="Wikipedia..." aria-label="Buscar na Wikipedia">
+                    <button id="wiki-search-btn" aria-label="Buscar na Wikipedia"><i class="fas fa-wikipedia-w"></i></button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container" id="main-content">
+        <div class="content-wrapper">
+            <article class="category-page">
+                <header class="category-header">
+                    <div class="category-icon-large">
+                        <i class="fas fa-flask cat-icon-ciencia"></i>
+                    </div>
+                    <h1>Ciência</h1>
+                    <p class="category-description">Descobertas científicas, física, química, biologia e muito mais</p>
+                    
+                    <div class="subcategories">
+                        <span class="subcategory-tag">Física</span>
+                        <span class="subcategory-tag">Química</span>
+                        <span class="subcategory-tag">Biologia</span>
+                        <span class="subcategory-tag">Astronomia</span>
+                        <span class="subcategory-tag">Medicina</span>
+                    </div>
+                </header>
+
+                <div class="articles-grid" id="articles-container">
+                    <!-- Artigos serão carregados dinamicamente via JavaScript -->
+                </div>
+
+                <div class="category-links">
+                    <h3><i class="fas fa-link"></i> Links Relacionados</h3>
+                    <div class="related-links-grid">
+                        <a href="https://pt.wikipedia.org/wiki/Ci%C3%AAncia" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-book"></i>
+                            <span>Ciência na Wikipedia</span>
+                        </a>
+                        <a href="https://pt.wikipedia.org/wiki/F%C3%ADsica" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-atom"></i>
+                            <span>Física</span>
+                        </a>
+                        <a href="https://pt.wikipedia.org/wiki/Qu%C3%ADmica" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-vial"></i>
+                            <span>Química</span>
+                        </a>
+                        <a href="https://pt.wikipedia.org/wiki/Biologia" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-dna"></i>
+                            <span>Biologia</span>
+                        </a>
+                        <a href="https://pt.wikipedia.org/wiki/Astronomia" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-star"></i>
+                            <span>Astronomia</span>
+                        </a>
+                        <a href="https://pt.wikipedia.org/wiki/Medicina" target="_blank" rel="noopener noreferrer" class="related-link-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <span>Medicina</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <section class="widget">
+                    <h3><i class="fas fa-list"></i> Outras Categorias</h3>
+                    <ul class="category-list" id="category-list-sidebar">
+                        <!-- Carregado dinamicamente -->
+                    </ul>
+                </section>
+
+                <section class="widget">
+                    <h3><i class="fas fa-fire"></i> Tags Populares</h3>
+                    <div id="popular-tags" class="tags-container">
+                        <!-- Carregado dinamicamente -->
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2024 Almanaque de Tudo. Todos os direitos reservados.</p>
+            <p>Explore, aprenda e compartilhe conhecimento!</p>
+        </div>
+    </footer>
+
+    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+    <script>
+        // Carregar artigos da categoria Ciência
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCategoryArticles('ciencia');
+        });
+    </script>
+</body>
+</html>
