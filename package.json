@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Este é um protótipo de um almanaque digital interativo, construído com HTML, CSS e JavaScript puros. O projeto foi projetado para ser um repositório de conhecimento fácil de navegar, com foco em uma experiência de usuário limpa e moderna.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo/issues"
+  },
+  "homepage": "https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo#readme"
+}
