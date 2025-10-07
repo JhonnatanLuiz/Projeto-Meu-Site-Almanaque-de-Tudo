@@ -3,58 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Almanaque de Tudo — artigos e curiosidades de ciência, história, tecnologia, natureza e cultura pop.">
-    <title>Almanaque de Tudo - Início</title>
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="Almanaque de Tudo - Início">
-    <meta property="og:description" content="Almanaque de Tudo — artigos e curiosidades de ciência, história, tecnologia, natureza e cultura pop.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/index.html">
-    <meta property="og:image" content="imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Almanaque de Tudo - Início">
-    <meta name="twitter:description" content="Almanaque de Tudo — artigos e curiosidades de ciência, história, tecnologia, natureza e cultura pop.">
-    <link rel="alternate" type="application/rss+xml" title="Almanaque de Tudo - RSS" href="/feed.xml">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Um almanaque digital com curiosidades e fatos interessantes.">
+    <title>Almanaque Digital</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="progressBar" aria-hidden="true"></div>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
-    <header>
-        <div class="header-top">
-            <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Alternar tema">Tema</button>
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menu de navegação">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <h1>Almanaque de Tudo</h1>
-        </div>
-        <nav id="main-navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="curiosidades.html">Curiosidades</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-        <form id="wiki-search" class="search" role="search" aria-label="Pesquisar na Wikipedia">
-            <label class="sr-only" for="wiki-q">Pesquisar</label>
-            <input type="search" id="wiki-q" name="q" placeholder="Pesquisar na Wikipedia" required>
-            <button type="submit">Buscar</button>
-            <ul id="search-suggestions" role="listbox" hidden></ul>
-        </form>
-    </header>
-
     <div class="container">
         <main id="main-content" class="content">
             <figure class="reveal">
                 <picture>
-                    <img src="imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg" alt="Colagem ilustrativa de temas do Almanaque de Tudo" width="1200" height="600" data-hero loading="eager" decoding="async">
+                    <img src="imagens/_36d6aaa1-6855-4a7f-8b3e-e3a01b0fc975.jpeg" alt="Colagem ilustrativa de temas do Almanaque de Tudo" width="1200" height="600" data-hero loading="eager" fetchpriority="high" decoding="async">
                 </picture>
                 <figcaption>Conhecimento para todos: ciência, história, tecnologia, natureza e muito mais.</figcaption>
             </figure>
@@ -150,35 +108,10 @@
                 </div>
             </article>
         </main>
-
-        <aside class="sidebar reveal">
-            <section class="widget">
-                <h3>Sobre o Autor</h3>
-                <p>Um entusiasta curioso, dedicado a explorar e compartilhar o conhecimento sobre os mais variados assuntos do nosso mundo.</p>
-            </section>
-            <section class="widget">
-                <h3>Categorias</h3>
-                <nav>
-                    <ul>
-                        <li><a class="external" href="https://pt.wikipedia.org/wiki/Hist%C3%B3ria" target="_blank" rel="noopener noreferrer">História</a></li>
-                        <li><a class="external" href="https://pt.wikipedia.org/wiki/Ci%C3%AAncia" target="_blank" rel="noopener noreferrer">Ciência</a></li>
-                        <li><a class="external" href="https://pt.wikipedia.org/wiki/Tecnologia" target="_blank" rel="noopener noreferrer">Tecnologia</a></li>
-                        <li><a class="external" href="https://pt.wikipedia.org/wiki/Natureza" target="_blank" rel="noopener noreferrer">Natureza</a></li>
-                        <li><a class="external" href="https://pt.wikipedia.org/wiki/Cultura_pop" target="_blank" rel="noopener noreferrer">Cultura Pop</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </aside>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Almanaque de Tudo. Todos os direitos reservados.</p>
-    </footer>
-
-    <button id="backToTop" aria-label="Voltar ao topo">▲</button>
-
-    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

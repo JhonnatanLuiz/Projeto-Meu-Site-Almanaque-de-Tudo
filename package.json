@@ -1,12 +1,21 @@
 {
-  "name": "almanaque-site-tools",
-  "version": "0.1.0",
-  "description": "Tools to generate RSS feed and sitemap for Almanaque de Tudo",
-  "main": "scripts/generate_feed.js",
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Este é um protótipo de um almanaque digital interativo, construído com HTML, CSS e JavaScript puros. O projeto foi projetado para ser um repositório de conhecimento fácil de navegar, com foco em uma experiência de usuário limpa e moderna.",
+  "main": "index.js",
   "scripts": {
-    "generate": "node scripts/generate_feed.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.12"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo/issues"
+  },
+  "homepage": "https://github.com/JhonnatanLuiz/Projeto-Meu-Site-Almanaque-de-Tudo#readme"
 }
